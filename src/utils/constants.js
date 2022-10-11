@@ -1,0 +1,31 @@
+export const STATUS_TYPES = {
+  IN_PROGRESS: "IN_PROGRESS",
+  COMPLETED: "COMPLETED",
+  CANCELLED: "CANCELLED",
+  PENDING: "PENDING",
+};
+
+export const SEVERITY_TYPES = {
+  LOW: "LOW",
+  MEDIUM: "MEDIUM",
+  HIGH: "HIGH",
+};
+
+export const ACTION_TYPES = {
+  START: "START",
+  CANCEL: "CANCEL",
+  COMPLETE: "COMPLETE",
+};
+
+export const USER_TYPE = {
+  ADMIN: "ADMIN",
+  CUSTOMER: "CUSTOMER",
+};
+
+export const HTTP_METHODS = {
+  GET: "GET",
+  POST: "POST",
+  PUT: "PUT",
+  DELETE: "DELETE",
+  PATCH: "PATCH",
+};

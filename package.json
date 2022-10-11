@@ -2,20 +2,45 @@
   "name": "maintenance-app-client",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://maintenance-app-server.herokuapp.com/",
   "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@mui/material": "^5.10.8",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "apexcharts": "^3.35.5",
+    "axios": "^1.1.2",
+    "bootstrap": "^5.2.2",
+    "http-status-codes": "^2.2.0",
+    "mdbreact": "^5.2.0",
+    "moment": "^2.29.4",
+    "prop-types": "^15.8.1",
+    "qs": "^6.11.0",
     "react": "^18.2.0",
+    "react-apexcharts": "^1.4.0",
+    "react-bootstrap": "^2.5.0",
+    "react-burger-menu": "^3.0.8",
     "react-dom": "^18.2.0",
+    "react-redux": "^8.0.4",
     "react-scripts": "5.0.1",
+    "react-table": "^7.8.0",
+    "reactstrap": "^9.1.4",
+    "redux": "^4.2.0",
+    "redux-thunk": "^2.4.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "npx eslint src",
+    "lint:fix": "npm run lint -- --fix",
+    "prettier": "npx prettier src --check",
+    "prettier:fix": "npm run prettier -- --write",
+    "format": "npm run prettier:fix && npm run lint:fix"
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +59,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint": "^8.25.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-react": "^7.31.8"
   }
 }
