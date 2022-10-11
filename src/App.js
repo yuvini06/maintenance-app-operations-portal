@@ -15,7 +15,8 @@ class App extends React.Component {
 
   initAxiosInterceptor = () => {
     axios.defaults.paramsSerializer = (params) => stringify(params);
-    axios.defaults.validateStatus = (status) => (status >= HttpStatus.OK && status < HttpStatus.MULTIPLE_CHOICES || status === HttpStatus.TEMPORARY_REDIRECT);
+    axios.defaults.validateStatus = (status) => ((status >= HttpStatus.OK && status < HttpStatus.MULTIPLE_CHOICES) 
+    || status === HttpStatus.TEMPORARY_REDIRECT);
   };
 
   render() {

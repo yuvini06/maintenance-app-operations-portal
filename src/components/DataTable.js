@@ -57,18 +57,18 @@ const getFormattedTimestamp = (unixTimestamp) =>
 const generateData = (row, props) => {
   const cells = [];
   for (const [key, value] of Object.entries(row)) {
-    if (key == "risk") {
+    if (key === "risk") {
       cells.push(renderCell(getSeverityLabel(value)));
-    } else if (key == "status") {
+    } else if (key === "status") {
       cells.push(renderCell(getStatusLabel(value)));
-    } else if (key == "planned_start_time" || key == "planned_end_time") {
+    } else if (key === "planned_start_time" || key === "planned_end_time") {
       cells.push(renderCell(getFormattedTimestamp(value)));
-    } else if (key == "actual_start_time" || key == "actual_end_time") {
+    } else if (key === "actual_start_time" || key === "actual_end_time") {
       if (row.status === STATUS_TYPES.PENDING) {
         cells.push(renderCell("—"));
       } else if (
         row.status === STATUS_TYPES.IN_PROGRESS &&
-        key == "actual_end_time"
+        key === "actual_end_time"
       ) {
         cells.push(renderCell(" —"));
       } else {

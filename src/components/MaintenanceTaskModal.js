@@ -12,10 +12,6 @@ import Button from "@mui/material/Button";
  * @author: Yuvini Sumanasekera
  */
 class MaintenanceTaskModal extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <>
