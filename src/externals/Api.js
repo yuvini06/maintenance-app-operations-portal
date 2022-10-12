@@ -1,6 +1,9 @@
 import axios from "axios";
 import {
+  fetchMaintenanceScheduleForUser,
   receiveMaintenanceSchedule,
+  createNewMaintenanceTask,
+  updateSelectedMaintenanceTask,
   refreshDataGrid,
   setErrorStatus,
 } from "../internals/Actions";
@@ -14,16 +17,15 @@ const fetchMaintenanceSchedule = (userType) => async (dispatch) => {
   };
 
   try {
+    dispatch(fetchMaintenanceScheduleForUser());
     const response = await axios(config);
     return dispatch(receiveMaintenanceSchedule(response.data));
   } catch (e) {
-    console.log("HERE")
     return dispatch(setErrorStatus(true));
   }
 };
 
 const updateMaintenanceTask = (data) => async (dispatch) => {
-  console.log(data);
   const config = {
     url: `/api/maintenance-work/update/tasks`,
     data,
@@ -34,6 +36,7 @@ const updateMaintenanceTask = (data) => async (dispatch) => {
   };
 
   try {
+    dispatch(updateSelectedMaintenanceTask());
     await axios(config);
     return dispatch(refreshDataGrid(true));
   } catch (e) {
@@ -49,6 +52,7 @@ const createMaintenanceTask = (data) => async (dispatch) => {
   };
 
   try {
+    dispatch(createNewMaintenanceTask());
     await axios(config);
     return dispatch(refreshDataGrid(true));
   } catch (e) {

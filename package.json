@@ -1,8 +1,8 @@
 {
-  "name": "maintenance-app-client",
+  "name": "maintenance-app-operations-portal",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://maintenance-app-server.herokuapp.com/",
+  "proxy": "http://localhost:3001/",
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
@@ -23,6 +23,7 @@
     "react-scripts": "5.0.1",
     "reactstrap": "^9.1.4",
     "redux": "^4.2.0",
+    "redux-devtools-extension": "^2.13.9",
     "redux-thunk": "^2.4.1",
     "web-vitals": "^2.1.4"
   },

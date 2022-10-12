@@ -17,7 +17,7 @@ import {
 } from "../externals/Api";
 
 /**
- * View maintenance schedule
+ * View maintenance schedule - ADMIN MODE
  *
  * @author: Yuvini Sumanasekera
  */
@@ -54,7 +54,6 @@ class MaintenanceScheduleOverview extends React.Component {
 
   createNewMaintenanceTask = (data) => {
     this.setState({ showInsertModal: false }, () => {
-      console.log(data);
       this.props.createMaintenanceTask(data);
     });
   };

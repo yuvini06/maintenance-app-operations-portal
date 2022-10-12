@@ -74,7 +74,7 @@ const generateData = (row, props) => {
       } else {
         cells.push(renderCell(getFormattedTimestamp(value)));
       }
-    } else if (key == "action") {
+    } else if (key === "action") {
       cells.push(
         <Button
           disabled={!value}
